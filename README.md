@@ -3,8 +3,9 @@
 ### Activity 1
 Put your inspo board link here. Do NOT leave a bare URL. REMOVE ALL INSTRUCTIONAL TEXT.
 
-1. Put your activity 1 answers here.
-2. Please keep the proper list format.
+1. https://docs.google.com/drawings/d/1Bz43Q08DGFOCgmofemXLwSxpZa4YqZLi2pbqFyB1qss/edit?usp=sharing
+2. I love cities and buildings. I also love Japanese culture.
+    
 
 
 ### Activity 2
