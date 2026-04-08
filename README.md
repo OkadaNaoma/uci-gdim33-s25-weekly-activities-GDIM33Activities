@@ -13,7 +13,7 @@
 
 ### Activity 2
 (1) Papers, please-like
-(2) the player works as a customs officer at an international airport in a fictional country. Travelers arrive one by one with passports, customs declaration forms, and luggage. The player must inspect each traveler, compare their documents with their appearance and baggage scan, and identify suspicious or anomalous traits before making a decision.
+(2) A player works as a customs officer at an international airport in a fictional country. Travelers arrive one by one with passports, customs declaration forms, and luggage. The player must inspect each traveler, compare their documents with their appearance and baggage scan, and identify suspicious or anomalous traits before making a decision.
 (3) https://docs.google.com/drawings/d/1NhbZnd_Kp8Ws2vqgfMxpA9pnqVoGAwDLbI3lQ5wfBoE/edit?usp=sharing
 
 
