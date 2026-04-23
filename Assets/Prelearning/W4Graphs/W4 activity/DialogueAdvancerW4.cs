@@ -9,6 +9,8 @@ namespace W4Activity
         // do not edit this line
         public static DialogueAdvancerW4 _Instance {get; private set;}
 
+        [SerializeField] private DialogueNodeW4 _startingDialogueNode;
+
         // More Singleton stuff
         // do not edit this method
         private void Awake() {
@@ -18,6 +20,11 @@ namespace W4Activity
             }
 
             _Instance = this;
+        }
+
+        private void Start()
+        {
+            EventBus.Trigger(VsEventNames.NewDialogueEvent, _startingDialogueNode);
         }
 
         // Button hooks up to this method

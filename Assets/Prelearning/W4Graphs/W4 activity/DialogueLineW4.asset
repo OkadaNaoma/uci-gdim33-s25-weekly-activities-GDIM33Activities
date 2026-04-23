@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d87814806be98455aa06d85e22ad29d6, type: 3}
+  m_Name: DialogueLineW4
+  m_EditorClassIdentifier: 
+  Line: Hello, world!
+  ReplyOptions:
+  - line: hello
+    nextNode: {fileID: 11400000, guid: a961ec1f3ad104c12bbcaf9460a3eb65, type: 2}
+  - line: ni howdy
+    nextNode: {fileID: 11400000, guid: 913e9a6b08cad4e9caf9b5bb487dc151, type: 2}
