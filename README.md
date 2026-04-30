@@ -40,3 +40,26 @@ Playtesting note: since the team members didn't understand how to play, it looks
 1. Yes, I think a writer could add more dialogue without writing code after the system is already set up by a programmer. The writer can create new dialogue nodes, write lines, and connect reply options in the Inspector. Because the dialogue content is stored as data, the writer does not need to change the actual system code unless they want new features.
 2. do not think there is a strict limit to the total number of dialogue nodes. A writer could keep creating many nodes and linking them together. However, there are practical limits, such as how organized the project is and how many reply options can fit on the screen at one time. In this setup, the UI seems to support up to about four reply options at once before space becomes a problem.
 3. The purpose of the “Regenerate Nodes” button is to update the Visual Scripting node library so Unity can recognize code and types as usable nodes. It helps Visual Scripting show the latest classes, methods, and data in the graph. Without regenerating nodes, newly added code or custom types might not appear correctly in Visual Scripting. This is especially important here because the activity says we need to manually add PlayerReplyW4 as a type before regenerating.
+
+
+## W5
+### Activity 1
+1. Create the basic ScriptableObject data structure.
+- I created a ScriptableObject type for traveler case data.
+- This data object stores information such as the traveler name, passport information, declared items, actual luggage items, correct decision, and score result.
+- Test: I created one case data asset in the Unity Project window and checked that I could edit the values in the Inspector.
+2. Connect the ScriptableObject data to the case manager.
+- I added a reference to the traveler case data in the case manager.
+- Instead of writing all case information directly inside the script, the case manager now reads information from the ScriptableObject.
+- Test: I pressed Play and checked that the traveler name, passport text, declaration text, and other case information appeared correctly on the UI.
+3. Use the ScriptableObject data for gameplay decisions.
+- I connected the correct decision and case information from the ScriptableObject to the approve/reject system.
+- The game now checks the player’s decision against the case data instead of only using hard-coded values.
+- Test: I tested both Approve and Reject and confirmed that the feedback and score changed based on the data stored in the ScriptableObject.
+4. Prepare the system for more cases later.
+- Since the case data is now separated from the main script, I can create more traveler cases by making more ScriptableObject assets.
+- This should make it easier to add Case 2, Case 3, and future cases without rewriting the whole game manager.
+- Test: I confirmed that the current case still works correctly after moving the case information into a ScriptableObject.
+
+### Activity 2
+I integrated ScriptableObjects into my vertical slice. Before this update, most of the case information was hard-coded in the case manager script. I changed the structure so that the traveler case data can be stored in a ScriptableObject asset. This includes information such as the traveler’s identity, passport information, declared items, actual luggage contents, and correct decision.I also connected this ScriptableObject data to the existing gameplay system. The UI now uses the data from the ScriptableObject, and the approve/reject decision can be checked based on that data. I tested the game in Unity, and the basic case still works correctly. This is useful because I can now add more traveler cases by creating new data assets instead of rewriting the main script every time.
