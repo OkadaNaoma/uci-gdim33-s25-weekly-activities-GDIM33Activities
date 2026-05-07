@@ -63,3 +63,17 @@ Playtesting note: since the team members didn't understand how to play, it looks
 
 ### Activity 2
 I integrated ScriptableObjects into my vertical slice. Before this update, most of the case information was hard-coded in the case manager script. I changed the structure so that the traveler case data can be stored in a ScriptableObject asset. This includes information such as the traveler’s identity, passport information, declared items, actual luggage contents, and correct decision.I also connected this ScriptableObject data to the existing gameplay system. The UI now uses the data from the ScriptableObject, and the approve/reject decision can be checked based on that data. I tested the game in Unity, and the basic case still works correctly. This is useful because I can now add more traveler cases by creating new data assets instead of rewriting the main script every time.
+
+
+## W6
+### Activity 1
+- Since my Milestone 1 submission, I added more structure to the game logic. I started using ScriptableObjects for traveler case data, so the case information can be separated from the main manager script. In addition, I added a Visual Scripting state machine/feedback controller to show how the game moves from waiting for a player decision to giving feedback after the player approves or rejects a traveler.
+- https://na1727.itch.io/gdim33-w6
+- My main goal for this playtest is to check whether players understand what to do without me explaining the game in person. I especially want to know if the tutorial is clear enough and if the player understands when they should use Inspect, Approve, Reject, and Next. My second goal is to test the balance between speed and careful inspection. I want the game to feel like the player can approve a traveler without inspecting if the documents look normal, but Inspect should still feel useful when something looks suspicious.
+- One idea I liked from another student's game was a tutorial screen that can be turned on and off anytime by pressing a specific key. I think this is useful because players can check the controls or rules again without restarting the game. I want to consider adding a similar feature to my game, especially because players may forget when to use Inspect, Approve, Reject, or Next.
+
+### Activity 2
+1. Multiply makes the color darker because RGB values are between 0.0 and 1.0, and multiplying them usually makes the numbers smaller. Lower RGB values make the final color darker and sometimes less saturated.
+2. It will usually be more translucent because multiplying Alpha values between 0.0 and 1.0 makes the result smaller. A smaller Alpha value means the object is more transparent.
+3. The shader gets the UV values from the mesh’s vertex data. Each vertex stores UV coordinates that tell the shader where to sample the texture.
+4. Yes, it is interesting because I can make visual effects by changing color values with math. I think this could be useful for highlights, feedback colors, or special effects in my game.
