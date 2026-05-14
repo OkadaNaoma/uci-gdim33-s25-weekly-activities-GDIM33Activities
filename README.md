@@ -77,3 +77,13 @@ I integrated ScriptableObjects into my vertical slice. Before this update, most 
 2. It will usually be more translucent because multiplying Alpha values between 0.0 and 1.0 makes the result smaller. A smaller Alpha value means the object is more transparent.
 3. The shader gets the UV values from the mesh’s vertex data. Each vertex stores UV coordinates that tell the shader where to sample the texture.
 4. Yes, it is interesting because I can make visual effects by changing color values with math. I think this could be useful for highlights, feedback colors, or special effects in my game.
+
+
+## W7
+1. The data for the Vertex Color node came from the mesh’s vertex data. The Shiba mesh already had color information stored in each vertex.
+2. The color is blended because vertex data is interpolated across the triangle by the GPU. Even though the color is stored only on vertices, the fragments between vertices receive mixed color values.
+3. The vertex color Shiba is less detailed because the color information only exists at the vertices, while a texture can store much more detailed pixel information. I think vertex color is useful for simple color areas, masks, lightweight effects, or debugging.
+4. I do not think anything major looks wrong with the mesh’s vertex normals. The colors change strongly in some areas, but that seems to come from the surface directions being shown as RGB values.
+5. I could test UV data with a debug shader by showing the UV values as colors. This would be useful to check if the texture mapping is stretched, flipped, or placed incorrectly.
+6. The lighting error happened because the Main Light Direction vector and the Shiba’s surface normals were pointing in opposite directions. This made the dot product negative on the side that should be lit, so the lighting looked backwards.
+7. We set the Blend Mode to Additive because fire should look bright and glowing. Additive blending makes the bright parts add light to the background, which works well for fire and other visual effects.
