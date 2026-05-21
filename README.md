@@ -87,3 +87,17 @@ I integrated ScriptableObjects into my vertical slice. Before this update, most 
 5. I could test UV data with a debug shader by showing the UV values as colors. This would be useful to check if the texture mapping is stretched, flipped, or placed incorrectly.
 6. The lighting error happened because the Main Light Direction vector and the Shiba’s surface normals were pointing in opposite directions. This made the dot product negative on the side that should be lit, so the lighting looked backwards.
 7. We set the Blend Mode to Additive because fire should look bright and glowing. Additive blending makes the bright parts add light to the background, which works well for fire and other visual effects.
+
+
+## W8
+### Activity 1
+- I tried to add a new item system after Milestone 2, but it caused some problems and did not work correctly. Because of that, I removed it from the current build. The current version is mostly similar to my Milestone 2 build.
+- [Play my build here](https://na1727.itch.io/gdim33-w8)
+- My playtesting goal is to see if players understand the main idea of my customs inspection game. In this game, if the documents do not look suspicious, letting a risky traveler pass should not cause a very large penalty. I want to test if players understand this risk-based decision style.
+- During the playtest, I noticed that some players clicked the buttons quickly before fully understanding the game system. Because of this, they sometimes progressed through the cases without thinking carefully about the documents or the inspection rules. Based on this feedback, I want to make the tutorial clearer so players can better understand the goal of the game before they start. I also want to adjust the score weighting, so randomly clicking buttons is less effective and players are encouraged to make more careful decisions.
+
+### Activity 2B
+1. The Fraction node takes only the decimal part of the time value. This makes the value loop from 0 to almost 1 again and again. We use that value to move the UVs of the shine texture, so the shine looks like it is moving.
+2. The shine texture needs to be black by default because we add it to the original sprite texture. Black is like adding 0, so it does not change the original sprite when no shine texture is set. If the default was white or another bright color, the sprite would become too bright or look wrong.
+3. The building texture is only a default or preview texture in the ShaderGraph. In the actual scene, Unity automatically uses each SpriteRenderer's sprite as the MainTex. Because of that, each object still shows its own sprite instead of all using the building texture.
+4. We multiply Time by ShineSpeed before the Fraction node because this changes how fast the looping UV movement happens. The Fraction node still keeps the value in a 0 to 1 loop. If we multiply after the Fraction node, it mostly changes the size of the UV offset, and the shine can jump or move in a strange way instead of simply moving faster.
