@@ -114,3 +114,6 @@ A third effect is the enchanted item glint. Enchanted items have a shiny overlay
 ![Minecraft enchanted item glint](Images/W9/2026-05-27_17.46.51.png)
 
 ### Activity 2
+I worked on a ShaderGraph for coloring an item or feedback element in my Vertical Slice project. I added properties like BaseColor, BaseAlpha, PulseStrength, and PulseSpeed, so I can adjust the material more easily.
+I also used Time and Sine nodes to create a pulsing effect. This makes the item look more noticeable than a flat color. For Milestone 3, I will keep the effect visible, and later I want to activate it from gameplay logic.
+![Shader Graphs](Images/W9/スクリーンショット%202026-05-27%2019.09.21.png)
