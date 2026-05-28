@@ -101,3 +101,16 @@ I integrated ScriptableObjects into my vertical slice. Before this update, most 
 2. The shine texture needs to be black by default because we add it to the original sprite texture. Black is like adding 0, so it does not change the original sprite when no shine texture is set. If the default was white or another bright color, the sprite would become too bright or look wrong.
 3. The building texture is only a default or preview texture in the ShaderGraph. In the actual scene, Unity automatically uses each SpriteRenderer's sprite as the MainTex. Because of that, each object still shows its own sprite instead of all using the building texture.
 4. We multiply Time by ShineSpeed before the Fraction node because this changes how fast the looping UV movement happens. The Fraction node still keeps the value in a 0 to 1 loop. If we multiply after the Fraction node, it mostly changes the size of the UV offset, and the shine can jump or move in a strange way instead of simply moving faster.
+
+
+## W9
+### Activity 1
+Our table (table 6?) chose Minecraft: Java Edition.
+One rendering effect is the block selection outline. When the player looks at a block, the game shows a thin outline around that block. I think the gameplay logic checks which block is under the player’s crosshair, then enables the outline only for that block. If the player looks away, the outline disappears. Pressing F1 also hides the HUD, so the outline becomes invisible too, although this is not only for the outline.
+![Minecraft block selection outline](Images/W9/2026-05-27_17.43.19.png)
+Another effect is status effect visuals, such as Night Vision or other potion effects. These can change the whole screen, so I think they are similar to full-screen or post-processing effects. They are activated when the player has a status effect and disabled when the timer ends.
+![Minecraft status effect visual](Images/W9/2026-05-27_17.44.58.png)
+A third effect is the enchanted item glint. Enchanted items have a shiny overlay, so I think this is a material or shader effect activated by item data.
+![Minecraft enchanted item glint](Images/W9/2026-05-27_17.46.51.png)
+
+### Activity 2
