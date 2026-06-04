@@ -117,3 +117,18 @@ A third effect is the enchanted item glint. Enchanted items have a shiny overlay
 I worked on a ShaderGraph for coloring an item or feedback element in my Vertical Slice project. I added properties like BaseColor, BaseAlpha, PulseStrength, and PulseSpeed, so I can adjust the material more easily.
 I also used Time and Sine nodes to create a pulsing effect. This makes the item look more noticeable than a flat color. For Milestone 3, I will keep the effect visible, and later I want to activate it from gameplay logic.
 ![Shader Graphs](Images/W9/スクリーンショット%202026-05-27%2019.09.21.png)
+
+
+## W10
+### Activity 1
+- I added a fourth player profile to the game and included a knife as an item.
+- [Play my build here](https://na1727.itch.io/gdim33-milestone-3)
+- I would like them to understand that, unlike in "Papers, Please," it is not necessary to inspect every single time.
+- After playing through the game once, there should be a button to reset the score and start over from the beginning.
+
+### Activity 2
+Our table discussed that a good planning strategy is to break a game into core mechanics and smaller systems before coding. For my game, I can separate it into traveler cases, passport information, declaration forms, luggage items, buttons, timer, score, and feedback.
+This planning process also helps me understand the real scope of the game. Some features sound simple, but after breaking them down, they need many smaller tasks. Because of this, planning helps me decide what is realistic and focus on a few mechanics that work well.
+
+### Activity 3
+I have added the data for the fifth traveler.
